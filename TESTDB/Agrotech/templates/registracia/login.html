@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    </style>
+<head>
+   {% load static %}
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,400;1,700&family=Inter:wght@700&display=swap" rel="stylesheet">
+</head>
+<body background>
+
+    <form  class ="form">
+      
+     <h1 class = "form_title">Регистрация</h1>  
+
+     <div class ="form_group">
+        <input class = "form_input" placeholder=" "> 
+        <label class="form_label">Введите почту (логин)</label>
+     </div>
+
+     <div class ="form_group">
+        <input class = "form_input" placeholder=" "> 
+        <label class="form_label">Введите фамилию</label>
+     </div>
+
+     <div class ="form_group">
+        <input class = "form_input" placeholder=" "> 
+        <label class="form_label">Введите имя</label>
+     </div>
+
+     <div class ="form_group">
+        <input class = "form_input" placeholder=" "> 
+        <label class="form_label">Введите отчество</label>
+     </div>
+
+     <div class ="form_group">
+        <input class ="form_input" placeholder=" "> 
+        <label class="form_label">Введите пароль</label>
+     </div>
+
+     <div class ="form_group">
+        <input class ="form_input" placeholder=" "> 
+        <label class="form_label">Повторите пароль</label>
+     </div>
+
+     <button class="form_button">Зарегистрироваться</button>
+     
+     <button class ="form_button2"><a href="{% url 'login' %}">У меня уже есть аккаунт</a></button>
+</a>
+    <a href="{%url 'home' %}"> <p id = "ATech">Agro Tech</p></a>
+    
+    </form>
+</body>
+</html>

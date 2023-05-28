@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: cursive
+}
+
+.sidenav {
+  width: 300px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidenav a {
+  display: block;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 45px;
+  text-shadow: 0.5px 0.5px 2px #000;
+  text-align: left;
+  transition: 0.3s;
+  color: #085208;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 20px;
+  
+}
+
+.sidenav a:hover {
+  transform: translateY(-7px);
+  background:  rgb(57, 152, 57);
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #57af49;
+}
+
+.sidenav h1 {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: 43px;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 500;
+  color: #084108;
+  margin-right: 40px;
+}
+
+.main {
+  margin-left: 300px;
+  padding: 15px 20px;
+}
+
+header {
+  margin-top: 15px;
+}
+
+header a {
+    margin-left: 780px;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px #000000;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+  }
+  
+.sidenav h2{
+    text-align: left;
+    font-weight: 100;
+    font-size: 15px;
+  }
+  
+.sidenav h3{
+    text-align: center;
+    padding: 0px;
+    margin-top: 50px;
+    width: 195px;
+}
+
+.footers {
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 1em;
+    padding-bottom: 0.2ch;
+  }
+  
+  .flex-container{
+    border-radius: 10px;
+    background-color: rgb(237, 237, 237);
+    box-shadow: 1px 1px 30px 1px rgb(171, 255, 176);
+    margin-right: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .flex-box{
+    width: 300px;
+    height: 330px;
+    background: rgb(195, 255, 191);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    
+  }
+
+  .img_inbox{
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    
+  }
+
+.first-p{
+  font-size: 20px;
+  color: white;
+  text-align: end;
+  padding: 0px;
+  margin: -60px;
+  display: flex;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 900;
+  
+}
+.second-p{
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 100;
+  font-size: 17px;
+  margin-bottom: 0.05px;
+  text-align: left;
+}
+
+p{
+  margin: -18px;
+  margin-top: 5px;
+  text-align: left;
+  margin-left: 25px;
+}
+.bottom-card a{
+  text-decoration: none;
+  color: #084108;
+  font-weight: 600;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}

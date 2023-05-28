@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css\style.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&family=Inter:wght@600&display=swap" rel="stylesheet">
+    <style>
+      .header { 
+      background-image: url('static/img/bg.jpg');
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+    </style>
+
+
+    <title>agrotech</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="header-line">
+            <div class="header-logo">
+              <a href="{%url 'home' %}"><img src="{%static 'img\AgroTech.png'%}" alt="переход на главную"></a>
+            </div>
+            
+          <div class="nav">
+            <a class="nav-item" href="#nawa cel">наша цель</a>
+            <a class="nav-item" href="#otzivi">отзывы</a>
+            <a class="nav-item" href="#vibor">предложения</a>
+            <a class="nav-item" href="#kontakti">контакты</a>
+          </div>
+          <div class="lk">
+            <a href="{% url 'login' %}">
+              <img src="{%static 'img\вход в лк.png'%}" alt="lk tab" />
+            </a>
+          </div>
+          <div class="header-down">
+            <div class="header-title">
+              Аренда и продажа сельскохозяйственной техники
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+
+      <section id = "nawa cel"> <!--section для перехода по лендингу-->
+      <div class="cards">
+        <div class="pered-conteinerom">
+            ПРЕИМУЩЕСТВА
+        </div>
+        <div class="container">
+             <div class="card-holder">
+        <div class="card">
+
+            <div class="card-image">
+                <img src="{%static 'img\card-img1.png'%}" alt="" class="card-img">
+            </div>
+            <div class="card-title">
+                Просто:
+            </div>
+            <div class="card-desc">
+                Заказ сельхоз техники
+            </div>
+        </div>
+         <div class="card">
+
+            <div class="card-image">
+                <img src="{%static 'img\card-img2.png'%}" alt="" class="card-img">
+            </div>
+            <div class="card-title">
+                Выгодно:
+            </div>
+            <div class="card-desc">
+                Подбор техники по хорошей цене
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-image">
+                <img src="{%static 'img\card-img3.png'%}" alt="" class="card-img">
+            </div>
+            <div class="card-title">
+                Удобно:
+            </div>
+            <div class="card-desc">
+                Личный менеджер поможет
+            </div>
+        </div>
+        <div class="card">
+
+          <span>  <div class="card-image"></span>
+                <img src="{%static 'img\card-img4.png'%}" alt="" class="card-img">
+            </div>
+            <div class="card-title">
+                Быстро:
+            </div>
+            <div class="card-desc">
+                Выполнение работ в сроки
+            </div>
+        </div>
+    </div>
+     </div>
+      </div>
+    </div>
+
+    <div class="nawa cel">
+ 
+        <div class="pered-conteinerom">
+          <span>   НАШИ </span> ЦЕЛИ 
+        </div>
+       <!-- <div class="container"> --> <!--/*если чето пойдет не так то вставь сюда класс контейнер*/-->
+        <div class="cel-desc 1">
+          <ul>
+          <li> Наша цель предоставить доступ по арендной техники фермерам. С другой стороны дать возможность владельцам техники получить дополнительный доход, сдавая свою технику в аренду.</li>
+          </ul>
+        <div class="cel-desc1">
+          <ul>
+          <li> <p> Наша организация обеспечивает контроль за выполнением условий соглашения как с стороны заказчика так и со стороны исполнителя. </p> </li>
+          </ul>
+      <!--  </div> -->
+        </div>
+    </div>
+    </div>
+  </section> <!--section для перехода по лендингу-->
+
+
+   <section id = "otzivi"> <!--section для перехода по лендингу-->
+
+    <div class="otzivi">
+    <div class="pered-conteinerom">
+      ОТЗЫВЫ <span> НАШИХ </span> КЛИЕНТОВ
+    </div>
+    
+    <div class="container_otzivi">
+      <div class="otziv1">
+        <img src="{%static 'img\miratorg.png'%}" width="100" height="100" alt="лого компании">
+        <div class="otz_text">
+       <span> "Мираторг" </span>
+          <h2>все супер</h2>
+          <h5>Заказ: Опрыскиватель Авант-1 (5 машин)</h5>
+          <h6>Срок/площадь: 100 (га)</h6>
+          <h6>Стоимость сделки: 710000р</h6>
+        </div>
+        
+    </div>
+    </div>
+
+
+    <div class="container_otzivi">
+      <div class="otziv2">
+        <img src="{%static 'img\ostankino.jpg'%}" width="100" height="100" alt="лого компании">
+        <div class="otz_text">  
+          <span> "Останкино" </span>
+        <h2>все супер</h2>
+          <h5>Заказ: Зерноуборочный комбайн "Лида-1600" (3 машины)</h5>
+          <h6>Срок/площадь: 10 смен</h6>
+          <h6>Стоимость сделки: 1500000р</h6>
+        </div>
+       
+    </div>
+    </div>
+
+
+    <div class="container_otzivi">
+      <div class="otziv1">
+        <img src="{%static 'img\cherkizovo.jpg'%}" width="100" height="100" alt="лого компании">
+        <div class="otz_text">
+       <span> "Черкизово" </span>
+          <h2>все супер</h2>
+          <h5>Заказ: Опрыскиватель "Туман-3" (2 машины)</h5>
+          <h6>Срок/площадь: 115 (га)</h6>
+          <h6>Стоимость сделки: 780000р</h6>
+        </div>
+        
+    </div>
+    </div>
+
+
+    <div class="container_otzivi">
+      <div class="otziv2">
+        <img src="{%static 'img\pokrovskii.jpg'%}" width="100" height="100" alt="лого компании">
+        <div class="otz_text">
+          
+          <span> "Покровский" </span>
+        <h2>все супер</h2>
+          <h5>Заказ: МТЗ-80 (10 машин)</h5>
+          <h6>Срок/площадь: 30 смен</h6>
+          <h6>Стоимость сделки: 3000000р</h6>
+        </div>
+        
+    </div>
+    </div>
+  </div>
+  </section> <!--section для перехода по лендингу-->
+
+  <section id = "predloj"> <!--section для перехода по лендингу-->
+
+    <div class="predl">
+      <div class="pered-conteinerom">
+        АКТУАЛЬНЫЕ ПРЕДЛОЖЕНИЯ
+      </div>
+      <div class="pervoepredl">
+      <img src="{%static 'img\predlojenie1. (2).jpg'%}" width="500" height="500" alt="">
+      <div class="predltext">
+        <h1>Корейский трактор LS PLUS 100 CABIN - LS</h1>
+        <h5>14000р за смену</h5>
+        <h5></h5>
+        <a href="{% url 'arenda_traktor'%}">перейти к предложению</a>
+      </div>
+    </div>
+    <div class="vtoroepredl">
+      <img src="{%static 'img\predlojenie2.jpg'%}" width="500" height="500" alt="">
+      <div class="predltext">
+        <h1>Зерноуборочный комбайн Палессе GS575</h1>
+        <h5>30000руб за смену</h5>
+        <h5></h5>
+        <a href="{% url 'kombArenda'%}">перейти к предложению</a>
+      </div>
+    </div>
+    </div>
+    <section id = "vibor"> <!--section для перехода по лендингу-->
+  
+  <div class="vibor">
+<div class="pered-conteinerom">
+  ВЫБИРАЙТЕ, ЧТО НУЖНО
+</div>
+<div class="knopka1">
+  <p><a href="{%url 'arenda_traktor'%}"><span>Аренда</span></a>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp аренда сельскохозяйственной техники
+  </div>
+
+  <div class="knopka2">
+    <p><a href="{%url 'trakProd'%}"><span>Продажа</span></a>
+      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp продажа сельскохозяйственной техники
+    </div>
+  </section> 
+  </section> 
+  <section id = "kontakti"> <!--section для перехода по лендингу-->
+
+    <div class="kont">
+      <div class="pered-conteinerom">
+        НАШИ КОНТАКТЫ
+      </div>
+      <div class="nomer">+7-999-000-00-12 - сотрудничество
+        <p>+7-999-879-45-45 - отдел кадров</p>
+        <p>agrotech@agrotech.com - по всем вопросам</p>
+      </div>
+      <div class="vremya">
+        <div class="budnie"> В будние дни: С 8:00 до 23:00 (мск)</div>
+        <div class="vihodnie"> В выходные дни: С 10:00 до 21:00 (мск)
+        <p> г. Москва, ул. Никольская 10 (м. Лубянка)</p> 
+        </div>
+
+      </div>
+      <div class="adres">
+       <!-- <div class = "karta" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/nikolskaya_ulitsa_10/Z04YcAVkTEEEQFtvfXt0dnVmYw==/?indoorLevel=1&ll=37.624544%2C55.757957&utm_medium=mapframe&utm_source=maps&z=16.75" style="color:#eee;font-size:12px;position:absolute;top:14px;">Никольская улица, 10 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.624544%2C55.757957&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjcxODgxMBI_0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCd0LjQutC-0LvRjNGB0LrQsNGPINGD0LvQuNGG0LAsIDEwIgoNiH8WQhUmCF9C&z=16.75" width="1350" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>-->
+       
+        
+      </div>
+     
+    </div>
+    </div>
+  </section> <!--section для перехода по лендингу-->
+  <footer>
+
+    <div class="footers">
+    <a href="#nawa cel">  <img src="{%static 'img\footerlogo.png'%}" alt=""></a>
+    <p>  </p>
+</div>
+  </footer>
+  </body>
+</html>

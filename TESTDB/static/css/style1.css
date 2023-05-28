@@ -1,0 +1,284 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  background: #E9E9E9;
+  border-radius: 20px;
+  border: 0px;
+  outline: none;
+  padding-inline: 10px;
+  font-size: 12px;
+}
+
+body {
+  background: url(./img/background.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.personal__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.personal__office {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 352px;
+  height: 254px;
+  left: 1px;
+  top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.222);
+  background: linear-gradient(257.81deg, rgba(136, 216, 149, 0.19) 5.29%, rgba(21, 206, 62, 0.06) 95.4%);
+  border-radius: 60px;
+}
+.personal__office_title {
+  margin-top: 23px;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.personal__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 380px;
+  top: 97px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.personal__avatar_photo {
+  width: 180px;
+  height: 180px;
+  background: #D9D9D9;
+}
+.personal__avatar_change {
+  width: 100px;
+  height: 20px;
+  left: 389px;
+  top: 236px;
+  background: #D9D9D9;
+  border-radius: 20px;
+  border: 0px;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 9px;
+}
+.personal__avatar_change:hover {
+  background: #bfbfbf;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50%;
+  gap: 5px;
+}
+.actions__buttons {
+  color: rgba(0, 0, 0, 0.5019607843);
+  width: 182px;
+  height: 29px;
+  left: 83px;
+  top: 197px;
+  background: #ECECEC;
+  border: 1px solid rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.actions__buttons:hover {
+  background: #71E745;
+}
+.record {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.record__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 11px;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s, visibility 0.4s;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.popup__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+}
+.popup__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 20px;
+  background: #D9D9D9;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+}
+.popup__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.popup__buttons_actions {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  border: 0px;
+  border-radius: 40px;
+  padding: 2px 10px;
+}
+.popup__buttons_close {
+  background: rgba(249, 9, 9, 0.58);
+}
+.popup__buttons_close:hover {
+  background: rgba(227, 8, 8, 0.58);
+}
+.popup__buttons_back {
+  background: #74EA3D;
+}
+.popup__buttons_back:hover {
+  background: #6bda38;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+}
+.open .popup__wrap {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.actions__buttons actions__buttons_my-office{
+  text-decoration: none;
+}
+
+.uberu_eto{
+  text-decoration: none;
+  font-style: #bfbfbf;
+}

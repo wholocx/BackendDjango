@@ -1,10 +1,35 @@
 from django.shortcuts import render
-from Agrotech.models import Customers
+from django.views.generic import TemplateView
 
-def customers(request):
-    # cust = Customers.objects.all()
-    # for i in cust:
-    #     print('******', i.name_cust, i.mail, i.patronymic_cust)
-    cust = Customers(surname_cust = 'Сысоев', name_cust = 'Евгений', patronymic_cust = 'Валерьевич', username_cust = 'Valna', mail = '123@gmail.com', pswdhash = '211233123')
-    cust.save()
-    #Customers.objects.filter(surname_cust = 'Очиров').delete()
+def index(request):
+    return render(request, 'indexx.html')
+
+def logging_in(request):
+    return render(request, 'vhod\\registration.html')
+
+def lk(request):
+    return render(request, 'LK_OSNOVA.html')
+
+def registration(request):
+    return render(request, 'registracia\\login.html')
+
+def predlojenie1(request):
+    return render(request, 'Sidenav\\arenda_traktori.html')
+
+def kombainiArenda(request):
+    return render(request, 'Sidenav\\arenda_kombaini.html')
+
+def opriskivateliArenda(request):
+    return render(request, 'Sidenav\\arenda.opriskivateli.html')
+
+def kombProd(request):
+    return render(request, 'Sidenav\\prodazha_kombaini.html')
+
+def oprisProd(request):
+    return render(request, 'Sidenav\\prodazha_opriskivateli.html')
+
+def trakProd(request):
+    return render(request, 'Sidenav\\prodazha_traktori.html')
+
+def changeLK(request):
+    return render(request, "LK_IZM.html")

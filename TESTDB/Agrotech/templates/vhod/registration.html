@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+    </style>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Форма входа</title>
+    <link rel="stylesheet" href="{% static 'css/registration.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,400;1,700&family=Inter:wght@700&display=swap" rel="stylesheet">
+</head>
+<body background>
+
+    <form  class ="form">
+
+     <h1 class = "form_title">Вход в личный кабинет</h1>  
+
+     <div class ="form_group">
+        <input class = "form_input" placeholder=" "> 
+        <label class="form_label">Введите логин</label>
+     </div>
+
+     <div class ="form_group">
+        <input class ="form_input" placeholder=" "> 
+        <label class="form_label">Введите пароль</label>
+     </div>
+
+     <button class="form_button">Авторизоваться</button>
+     <button class ="form_button2"><a href="{% url 'registration' %}">Еще не зарегистрированы?</a></button>
+    <a href="{%url 'home' %}"> <p>Agro Tech</p></a>
+    </form>
+</body>
+</html>

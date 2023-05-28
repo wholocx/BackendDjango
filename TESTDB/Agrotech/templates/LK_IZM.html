@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Изменение данных личного кабинета - agrotech</title>
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css\style1.css'%}" />
+  </head>
+
+  <body>
+    <div class="persoanl">
+      <h1 class="personal__title">
+        <a href="{%url 'home'%}"
+          ><img src="{% static 'img/AgroTech.png'%}" alt="переход на главную"
+        /></a>
+      </h1>
+      <div class="personal__wrap">
+        <div class="personal__office">
+          <span class="personal__office_title">Личный кабинет</span>
+          <div class="personal__office_actions actions">
+            <button class="actions__buttons actions__buttons_my-office">
+              <a class="uberu_eto" href="{%url 'user'%}">Мой кабинет</a>
+            </button>
+            <button class="actions__buttons actions__buttons_personal-data">
+              <a class="uberu_eto" href="{%url 'changeData'%}">Изменить данные</a>
+            </button>
+            <button class="actions__buttons actions__buttons_exit">
+              Выход
+            </button>
+          </div>
+        </div>
+        <div class="personal__avatar">
+          <div class="personal__avatar_photo">
+            <img src="{%static 'img/avatar.jpg'%}" width="180" height="180" alt="" />
+          </div>
+          <button class="personal__avatar_change">Сменить аватар</button>
+        </div>
+        <div class="personal__record record">
+          <div class="record__item record__mail">
+            <span class="record__mail_text">Почта:</span>
+            <input class="record__mail_input" type="text" />
+          </div>
+          <div class="record__item record__mail_new">
+            <span class="record__mail_new_text">Новая почта:</span>
+            <input class="record__mail_new_input" type="text" />
+          </div>
+          <div class="record__item record__pass">
+            <span class="record__pass_text">Новый пароль:</span>
+            <input class="record__pass_input" type="password" />
+          </div>
+          <div class="record__item record__repeatpass">
+            <span class="record__repeatpass_text">Повторите пароль:</span>
+            <input class="record__repeatpass_input" type="password" />
+          </div>
+          <div class="record__item record__mail_old">
+            <span class="record__mail_old_text">Старый пароль:</span>
+            <input class="record__mail_old_input" type="password" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup">
+      <div class="popup__wrap">
+        <span class="popup__text"
+          >Уверены, что хотите покинуть личный кабинет?</span
+        >
+        <div class="popup__buttons">
+          <button class="popup__buttons_actions popup__buttons_close">
+            <a class="uberu_eto" href="{%url 'home'%}">Покинуть</a>
+          </button>
+          <button class="popup__buttons_actions popup__buttons_back">
+            Назад
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="{%static 'script.js'%}"></script>
+  </body>
+</html>

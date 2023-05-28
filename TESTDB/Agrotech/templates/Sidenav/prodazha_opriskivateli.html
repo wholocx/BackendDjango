@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тракторы</title>
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css\styleArenda.css'%}" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="{%url 'home'%}"
+        ><img src="{%static 'img/AgroTech.png'%}" height="30px" alt=""
+      /></a>
+    </header>
+    <section id="sidenav"></section>
+    <div class="sidenav">
+      <h1>Продажа</h1>
+
+      <a href="{%url 'trakProd'%}">Тракторы</a>
+
+      <a href="{% url 'kombProd'%}">Комбайны</a>
+      <a href="{%url 'oprProd'%}">Опрыскиватели</a>
+      <a href="{%url 'arenda_traktor'%}"><h2>Перейти в раздел аренд</h2></a>
+      <h3><a href="{%url 'user'%}">Личный кабинет</a></h3>
+    </div>
+    <div class="main">
+      <div class="flex-container">
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/3opris/1 (ОС БАРС-3000-М).png'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">ОС БАРС-3000-М</p>
+            <p class="second-p">36122842руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{% static 'img/prodaja/3opris/2 (ТУМАН 1М).png'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">ТУМАН-1М</p>
+            <p class="second-p">120000руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <footer>
+      <div class="footers">
+        <a href="#sidenav"> <img src="{%static 'img/footerlogo.png'%}" alt="" /></a>
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>

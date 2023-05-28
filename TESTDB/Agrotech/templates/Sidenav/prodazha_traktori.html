@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тракторы</title>
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css\styleArenda.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="{%url 'home'%}"
+        ><img src="{%static 'img/AgroTech.png'%}" height="30px" alt=""
+      /></a>
+    </header>
+    <section id="sidenav"></section>
+    <div class="sidenav">
+      <h1>Продажа</h1>
+
+      <a href="{%url 'trakProd'%}">Тракторы</a>
+
+      <a href="{% url 'kombProd'%}">Комбайны</a>
+      <a href="{%url 'oprProd'%}">Опрыскиватели</a>
+      <a href="{%url 'arenda_traktor'%}"><h2>Перейти в раздел аренд</h2></a>
+      <h3><a href="{%url 'user'%}">Личный кабинет</a></h3>
+    </div>
+    <div class="main">
+      <div class="flex-container">
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/1 (МТЗ 1221.2).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">МТЗ 1221.2</p>
+            <p class="second-p">340000 руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/2 (КАТ 3004-А1).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">КАТ 3004-А1</p>
+            <p class="second-p">300000руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/3 (LOVOL TD 904).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">LOVOL TD 904</p>
+            <p class="second-p">2389743 руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/4 (Valtra T191H).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">Valtra T191H</p>
+            <p class="second-p">902352 руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/5 (ЛТЗ Т-40М).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">ЛТЗ Т-40М</p>
+            <p class="second-p">124872 руб</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/prodaja/1tr/6 (Скаут Т-254С).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">Скаут Т-254С</p>
+            <p class="second-p">120000 руб</p>
+            <a href="">В избранное</a>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    <footer>
+      <div class="footers">
+        <a href="#sidenav"> <img src="{%static 'img/footerlogo.png'%}" alt= /></a>
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>

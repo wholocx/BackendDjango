@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тракторы</title>
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css\styleArenda.css'%}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="{%url 'home'%}"
+        ><img src="{%static 'img/AgroTech.png'%}" height="30px" alt=""
+      /></a>
+    </header>
+    <section id="sidenav"></section>
+    <div class="sidenav">
+      <h1>Аренда</h1>
+
+      <a href="{%url 'arenda_traktor'%}">Тракторы</a>
+      <a href="{% url 'kombArenda'%}">Комбайны</a>
+      <a href="{%url 'oprArenda'%}">Опрыскиватели</a>
+      <a href="{%url 'trakProd'%}"><h2>Перейти в раздел продаж</h2></a>
+      <h3><a href="{%url 'user'%}">Личный кабинет</a></h3>
+    </div>
+    <div class="main">
+      <div class="flex-container">
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/arenda/2comb/1 (CLAAS Avero 160).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">CLAAS Avero 160</p>
+            <p class="second-p">14000руб/смена</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/arenda/2comb/2 (Deutz-Fahr C9306 TS).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">Deutz-Fahr C9306 TS</p>
+            <p class="second-p">12341руб/смена</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+
+        <div class="flex-box">
+          <div class="img_inbox">
+            <img
+              src="{%static 'img/arenda/2comb/3 (Deutz-Fahr C5000).jpg'%}"
+              height="170"
+              width="250"
+              alt=""
+            />
+          </div>
+          <div class="bottom-card">
+            <p class="fitst-p">Deutz-Fahr C5000</p>
+            <p class="second-p">12941руб/смена</p>
+            <a href="">В избранное</a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    <footer>
+      <div class="footers">
+        <a href="#sidenav"> <img src="{%static 'img/footerlogo.png'%}" alt="" /></a>
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>
