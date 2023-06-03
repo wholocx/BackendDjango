@@ -12,22 +12,26 @@
 </head>
 <body background>
 
-    <form  class ="form">
+    <form method="POST" class ="form">
+    {%csrf_token %}
 
      <h1 class = "form_title">Вход в личный кабинет</h1>  
 
      <div class ="form_group">
-        <input class = "form_input" placeholder=" "> 
+        <input type = "text" name = "username" class = "form_input" placeholder=" "> 
         <label class="form_label">Введите логин</label>
      </div>
 
      <div class ="form_group">
-        <input class ="form_input" placeholder=" "> 
+        <input type = "password" name = "password" class = "form_input" placeholder=" "> 
         <label class="form_label">Введите пароль</label>
      </div>
 
      <button class="form_button">Авторизоваться</button>
      <button class ="form_button2"><a href="{% url 'registration' %}">Еще не зарегистрированы?</a></button>
+     {%for message in messages%}
+        <p id = ''>{{message}}</p>
+     {%endfor%}
     <a href="{%url 'home' %}"> <p>Agro Tech</p></a>
     </form>
 </body>

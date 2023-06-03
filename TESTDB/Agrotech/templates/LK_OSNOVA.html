@@ -38,12 +38,12 @@
             <input class="record__pass_input" type="password" />
           </div>
           <div class="record__item record__repeatpass">
-            <span class="record__repeatpass_text">Телефон </span>
-            <input class="record__repeatpass_input" type="password" />
+            <span class="record__repeatpass_text">Имя пользователя </span>
+            {{request.user}}
           </div>
           <div class="record__item record__mail_old">
             <span class="record__mail_old_text">Почта </span>
-            <input class="record__mail_old_input" type="password" />
+            {{request.user.email}}
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
         >
         <div class="popup__buttons">
           <button class="popup__buttons_actions popup__buttons_close">
-            <a class="uberu_eto" href="{%url 'home'%}">Покинуть</a>
+            <a class="uberu_eto" href="{%url 'logout'%}">Покинуть</a>
           </button>
           <button class="popup__buttons_actions popup__buttons_back">
             Назад
