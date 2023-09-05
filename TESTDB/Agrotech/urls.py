@@ -13,5 +13,5 @@ urlpatterns = [
     path('oprProd/', views.oprisProd, name= 'oprProd'),
     path('trakProd/', views.trakProd, name= 'trakProd'),
     path('user/', views.lk, name= 'user'),
-    path('user/changeData/', views.changeLK, name = 'changeData')
+    path('changeData/', views.changeLK, name = 'changeData')
 ]

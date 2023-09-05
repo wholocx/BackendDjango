@@ -48,8 +48,8 @@ font-weight: 800;
     color: #363434;
     transition: 0.3s;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-font-family: 'Inter', sans-serif;
-font-weight: 700;  
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;  
 }
 
 .form_input{

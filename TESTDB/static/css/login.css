@@ -22,6 +22,9 @@ body {
     text-align: center;
     margin: 0 0 25px 10px;
     letter-spacing: 0.5px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+font-family: 'Inter', sans-serif;
+font-weight: 800;
 }
 
 .form_group{
@@ -30,6 +33,7 @@ body {
 }
 
 .form_label {
+    text-align: center;
     font-weight: bold;
     position: absolute;
     margin-top:4px;
