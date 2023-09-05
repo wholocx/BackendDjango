@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Изменение данных личного кабинета - agrotech</title>
+    <title>Личный кабинет - agrotech</title>
     {% load static %}
     <link rel="stylesheet" type = "text/css" href="{%static 'css\style1.css'%}" />
   </head>
@@ -12,10 +12,8 @@
   <body>
     <div class="persoanl">
       <h1 class="personal__title">
-        <a href="{%url 'home'%}"
-          ><img src="{% static 'img/AgroTech.png'%}" alt="переход на главную"
-        /></a>
-      </h1>
+        <a href="{%url 'home'%}"><img src="{% static 'img/AgroTech.png'%}" alt="переход на главную"></a></h1>
+    <div class="personal__wrap">
       <div class="personal__wrap">
         <div class="personal__office">
           <span class="personal__office_title">Личный кабинет</span>
@@ -32,33 +30,25 @@
           </div>
         </div>
         <div class="personal__avatar">
-          <div class="personal__avatar_photo">
-            <img src="{%static 'img/avatar.jpg'%}" width="180" height="180" alt="" />
-          </div>
-          <button class="personal__avatar_change">Сменить аватар</button>
+          <div class="personal__avatar_photo"><img src="{%static 'img/avatar.jpg'%}" width="180" height="180" alt=""></div>
         </div>
         <div class="personal__record record">
-          <div class="record__item record__mail">
-            <span class="record__mail_text">Почта:</span>
-            <input class="record__mail_input" type="text" />
-          </div>
-          <div class="record__item record__mail_new">
-            <span class="record__mail_new_text">Новая почта:</span>
-            <input class="record__mail_new_input" type="text" />
-          </div>
           <div class="record__item record__pass">
-            <span class="record__pass_text">Новый пароль:</span>
-            <input class="record__pass_input" type="password" />
+            <span class="record__pass_text">ФИО </span>
+            {{request.user.first_name}} {{request.user.last_name}}
           </div>
           <div class="record__item record__repeatpass">
-            <span class="record__repeatpass_text">Повторите пароль:</span>
-            <input class="record__repeatpass_input" type="password" />
+            <span class="record__repeatpass_text">Имя пользователя </span>
+            {{request.user}}
           </div>
           <div class="record__item record__mail_old">
-            <span class="record__mail_old_text">Старый пароль:</span>
-            <input class="record__mail_old_input" type="password" />
+            <span class="record__mail_old_text">Почта </span>
+            {{request.user.email}}
           </div>
         </div>
+        {%for message in messages%}
+        <p class = "record__mail_old_text" id = ''>{{message}}</p>
+        {%endfor%}
       </div>
     </div>
     <div class="popup">
@@ -68,7 +58,7 @@
         >
         <div class="popup__buttons">
           <button class="popup__buttons_actions popup__buttons_close">
-            <a class="uberu_eto" href="{%url 'home'%}">Покинуть</a>
+            <a class="uberu_eto" href="{%url 'logout'%}">Покинуть</a>
           </button>
           <button class="popup__buttons_actions popup__buttons_back">
             Назад

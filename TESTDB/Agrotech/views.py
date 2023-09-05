@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.views.generic import TemplateView
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, logout
+from django.urls import reverse_lazy
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import PasswordChangeForm
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .forms import CreateUserForm
+from Agrotech.forms import CreateUserForm
 
 
 def index(request):
@@ -25,7 +26,7 @@ def logging_in(request):
             else:
                 messages.info(request, 'Имя пользователя или пароль неверны')
         context = {}
-        return render(request, 'vhod\\registration.html', context)
+        return render(request, 'vhod\\registration.html', context) 
 
 @login_required(login_url = 'login')
 def lk(request):
@@ -42,19 +43,52 @@ def registration(request):
         ctx = {'form': form}
         if (request.method == 'POST'):
             form = CreateUserForm(request.POST)
-            password = form['password1']
-
-            if form.is_valid():
-                form.save()
-                user = form.cleaned_data.get('username')
-                messages.success(request, user + ', вы успешно зарегистрированы!')
-                return redirect('login')
-            elif(len(password) <=7):
+            username = request.POST['username']
+            first_name = request.POST['first_name']
+            last_name = request.POST['last_name']
+            email = request.POST['email']
+            password1 = request.POST['password1']
+            password2 = request.POST['password2']
+            validation = False
+            if(len(password1) <=7):
                 messages.error(request, 'Пароль должен быть не менее 8 символов!')
+            elif(password1 != password2):
+                messages.error(request, 'Пароли не совпадают!')
+            elif(('@' in email) == False):
+                messages.error(request, 'Пароли не совпадают!')
+            else:
+                validation = True
+            if validation == True:
+                user= User.objects.create_user(username, email, password1)
+                user.first_name = first_name
+                user.last_name = last_name
+                user.save()
+                messages.success(request, username + ', вы успешно зарегистрированы!')
+                print('Все ок')
+                return redirect('login')
             
 
 
         return render(request, 'registracia\\login.html', ctx)
+
+@login_required(login_url = 'login')
+def changeLK(request):   
+    if(request.method == 'POST'):
+        form = PasswordChangeForm(data = request.POST, user=request.user)
+        if (form.is_valid()):
+            form.save()
+            update_session_auth_hash(request, form.user)
+            messages.success(
+                request, "Пароль успешно изменен!")
+            return redirect('changeData')
+    else:
+        form = PasswordChangeForm(user = request.user)
+        args = {'form': form}
+        return render(request, 'LK_IZM.html', args)
+
+
+
+
 
 def logoutUser(request):
     logout(request)
@@ -84,6 +118,3 @@ def oprisProd(request):
 def trakProd(request):
     return render(request, 'Sidenav\\prodazha_traktori.html')
 
-@login_required(login_url = 'login')
-def changeLK(request):
-    return render(request, "LK_IZM.html")
